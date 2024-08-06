@@ -7,12 +7,12 @@ import { useProposal } from "@/ContextProviders/ProposalProvider";
 import { enqueueSnackbar } from "notistack";
 import { useEffect, useState } from 'react';
 import { createPublicClient, http, Hex } from 'viem';
-import { baseSepolia} from 'viem/chains';
+import { polygonAmoy} from 'viem/chains';
 import { useAccount, useChainId, useWalletClient } from 'wagmi';
 import axios from 'axios';
 import nero from '@/components/launch/nero.json'
 const publicClient = createPublicClient({
-  chain: baseSepolia,
+  chain: polygonAmoy,
   transport: http(),
 });
 
@@ -87,7 +87,7 @@ const ConvertModal = () => {
     params.append('licenseType', licenseType);
 
     try {
-      const response = await axios.post('https://api-amoy.baseSepoliascan.com/api', params.toString());
+      const response = await axios.post('https://api-amoy.polygonAmoyscan.com/api', params.toString());
       console.log(apiKey);
       console.log(contractAddress);
       console.log(contractSourceCode);
