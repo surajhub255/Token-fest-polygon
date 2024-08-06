@@ -9,7 +9,7 @@ import { useState } from 'react';
 import { useAccount } from 'wagmi';
 
 export default function Page() {
-    const { address } = useAccount(); // Destructure the address from useAccount
+    const { address } = useAccount();
     const [anonAadhaar] = useAnonAadhaar();
     if (anonAadhaar.status === "logged-in") {
         localStorage.setItem('fromAnon' , 'true');
@@ -105,7 +105,7 @@ export default function Page() {
                     </label>
                 </div>
                 <div className='mx-auto w-[60%] max-md:w-[95%] my-7 px-6 py-2 border-green-300 border-dotted border-2 rounded-xl'>
-                    <h2 className='text-xl text-white mb-3'>
+                    <h2 className='text-xl text-black mb-3'>
                         Verify your identity using Anon Aaadhar, click login!
                     </h2>
                     <LogInWithAnonAadhaar
@@ -130,7 +130,7 @@ export default function Page() {
             </div>
             <div className='w-[60%] max-md:w-[95%] mx-auto backdrop-blur-md px-6 py-2 border-green-300 border-dotted border-2 rounded-xl'>
                 {anonAadhaar?.status === 'logged-in' && (
-                    <div className='mx-auto text-md text-white'>
+                    <div className='mx-auto text-md text-black'>
                         <h2 className='my-2 text-xl'>✅ Your Proof is valid</h2>
                         <AnonAadhaarProof
                             code={JSON.stringify(anonAadhaar.anonAadhaarProofs, null, 2)}
