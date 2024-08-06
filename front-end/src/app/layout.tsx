@@ -10,6 +10,7 @@ import './globals.css'
 
 import { cookieToInitialState } from 'wagmi'
 import { config } from "./wagmi";
+import AnonProvider from "./provider/anon/anonprovider";
 
 export default function RootLayout({
   children,
@@ -29,7 +30,11 @@ export default function RootLayout({
             )}
           >
             <body className="font-raleway text-sm text-gray-800">
-            <Web3ModalProvider>{children}</Web3ModalProvider>
+            <Web3ModalProvider>
+            <AnonProvider>
+              {children}
+            </AnonProvider>
+            </Web3ModalProvider>
             </body>
           </SnackbarProvider>
       </ProposalProvider>

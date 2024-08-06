@@ -4,9 +4,30 @@ import { FaDiscord, FaXTwitter } from "react-icons/fa6";
 import { BsTelegram } from "react-icons/bs";
 import Nav from "@/components/common/Nav";
 import { lightTheme } from "@thirdweb-dev/react";
+import { useAccount } from "wagmi";
+import { useEffect } from "react";
 
 
 export default function Home() {
+  const { address } = useAccount();
+
+  useEffect(() => {
+    if (address && !localStorage.getItem('fromAnon')) {
+      window.location.href = "/anon";
+    }
+  }, [address]);
+
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      if (!address) {
+        localStorage.removeItem('fromAnon');
+      }
+    }, 5000);
+
+    return () => clearTimeout(timer); 
+  }, [address]);
+  
+
   return (
 
     <>
