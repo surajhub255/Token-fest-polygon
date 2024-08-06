@@ -6,8 +6,10 @@ import { Input, InputNumber, Radio, DatePicker } from "antd";
 import { useProposal } from "@/ContextProviders/ProposalProvider";
 import { enqueueSnackbar } from "notistack";
 import Nav2 from "@/components/common/Nav/nav2";
+import { useRouter } from 'next/navigation'
 
 const CreateProposal = () => {
+  const router = useRouter()
   const { setProposal } = useProposal();
 
   interface FormMessage {
@@ -68,6 +70,9 @@ const CreateProposal = () => {
           variant: "success",
         });
         actions.setSubmitting(false);
+        setTimeout(() => {
+        router.push('/dashboard/started-events')
+        },3000)
       }}
     >
       {({ isSubmitting, setFieldValue, values }) => (
@@ -188,7 +193,7 @@ const CreateProposal = () => {
             <div>
               <div>
                 <label htmlFor="date" className="block mb-2">
-                  Valid till
+                  Event Date
                 </label>
 
                 <DatePicker

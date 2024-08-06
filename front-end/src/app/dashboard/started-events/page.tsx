@@ -50,8 +50,8 @@ const [isHovered, setIsHovered] = useState(false);
           <Link href="/events/info" className='h-[400px] w-full sm:w-[350px] p-6 bg-[#BDE3F0] '>
             <div className='bg-cover bg-center h-[260px] w-full' style={{ backgroundImage: `url('/startedevents.png')` }}>
             </div>
-            <h1 className='text-black font-Raleway text-2xl font-semibold leading-normal capitalize py-4'>
-              NFT Details
+            <h1 className='text-black font-Raleway text-xl font-semibold leading-normal capitalize py-4'>
+            NetSepio ÐWi-Fi Launch Party: A Night of Futuristic Innovation
             </h1>
           </Link>
         </div>
