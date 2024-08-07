@@ -105,7 +105,8 @@ const EventsData = () => {
                 Event Title
               </label>
               <div className="mt-2">
-                {proposal?.title}
+                {/* {proposal?.title} */}
+                NetSepio ÐWi-Fi Launch Party: A Night of Futuristic Innovation
               </div>
             </div>
 
@@ -114,7 +115,8 @@ const EventsData = () => {
                 Event Venue
               </label>
               <div className="mt-2">
-                {proposal?.venue}
+                {/* {proposal?.venue} */}
+                Mumbai Sky Lounge
               </div>
             </div>
 
@@ -124,7 +126,12 @@ const EventsData = () => {
                 Event Description
               </label>
               <div className="mt-2">
-                {proposal?.description}
+                {/* {proposal?.description} */}
+                Experience the future of the internet at NetSepio's exclusive Mumbai launch party. 
+                Immerse yourself in a world of cutting-edge technology as we unveil our groundbreaking decentralized Wi-Fi solution. 
+                Enjoy world-class music with DJ Neo, interactive holographic displays,  cypherpunk vibes, and the opportunity to 
+                claim your free ÐVPN with the option to activate ÐWi-Fi. This is more than an event; it's bringing in the future 
+                of internet, powered by DePIN.
               </div>
             </div>
 
@@ -134,8 +141,10 @@ const EventsData = () => {
                 <label className="font-bold" htmlFor="priceperNFT">
                   Price per NFT
                 </label>
-                <div className="mt-2">
-                  {proposal?.priceperNFT}
+                <div className="mt-2 flex gap-20">
+                  {/* {proposal?.priceperNFT} */}
+                  <div className="mt-4">1 (USDT)</div>
+                  <div className="bg-[#0F4C81] rounded-full px-10 py-2 text-white cursor-pointer">BUY</div>
                 </div>
               </div>
 
@@ -150,7 +159,8 @@ const EventsData = () => {
                 </label>
                 
                 <div className="mt-2">
-                {proposal?.proposal_type}
+                {/* {proposal?.proposal_type} */}
+                Token Fest Holder
                 </div>
               </div>
             </div>
@@ -163,7 +173,8 @@ const EventsData = () => {
                 </label>
                 
                 <div className="mt-2">
-                {proposal?.date ? new Date(proposal?.date).toDateString() : 'Invalid date'}
+                {/* {proposal?.date ? new Date(proposal?.date).toDateString() : 'Invalid date'} */}
+                30/09/2024
                 </div>
               </div>
             </div>
